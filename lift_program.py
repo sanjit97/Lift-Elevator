@@ -27,6 +27,9 @@ while(returned_choice=='yes'):
     print(" Current status of Lift is {}".format(lift_currentstatus))
 
     floornumber=int(input("\n Hello! Which floor are you in?"))
+    if(floornumber>10):
+        print("\n This floor doesnt exist ! ")
+        break
     if (floornumber == lift_currentfloor):
         lift_currentstatus="open"
         print("\n The lift is in your floor! ")
